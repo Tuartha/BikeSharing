@@ -1,3 +1,5 @@
+import os
+os.system("pip install --no-cache-dir matplotlib seaborn")
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
