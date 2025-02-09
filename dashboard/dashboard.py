@@ -8,7 +8,8 @@ import streamlit as st
 # Load dataset
 @st.cache_data
 def load_data():
-    return pd.read_csv("main_data.csv", parse_dates=['dteday'])
+    file_path = os.path.join(os.path.dirname(__file__), "main_data.csv")
+    return pd.read_csv(file_path, parse_dates=['dteday'])
 
 df = load_data()
 df["dteday"] = df["dteday"].dt.date
